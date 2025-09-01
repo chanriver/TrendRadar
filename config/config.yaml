@@ -5,8 +5,8 @@ app:
 crawler:
   request_interval: 1000 # 请求间隔(毫秒)
   enable_crawler: true # 是否启用爬取新闻功能，如果 false，则直接停止程序
-  use_proxy: false # 是否启用代理，false 时为关闭
-  default_proxy: "http://127.0.0.1:10086"
+  use_proxy: true # 是否启用代理，false 时为关闭
+  default_proxy: "http://361026.xyz:7893"
 
 # 🔸 daily（当日汇总模式）
 #   • 推送时机：按时推送
@@ -38,7 +38,7 @@ notification:
     # 因为我们白嫖的 github 服务器执行时间不稳定，所以时间范围要根据实际尽可能大一点，留足 2 小时
     # 如果你想寻求稳定的按时的推送，建议通过 docker 部署在个人的服务器上
     time_range:
-      start: "20:00"  # 推送时间范围开始（北京时间）
+      start: "16:35"  # 推送时间范围开始（北京时间）
       end: "22:00"    # 推送时间范围结束（北京时间）
     once_per_day: true  # 每天在时间范围内只推送一次，如果 false，则时间范围内每次执行都推送一次
     push_record_retention_days: 7  # 推送记录保留天数
